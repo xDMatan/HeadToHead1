@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "153037029142",
+    "project_id": "headtoheadfb",
+    "storage_bucket": "headtoheadfb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153037029142:android:a186e65154ddfeec13da37",
+        "android_client_info": {
+          "package_name": "com.example.headtohead"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXevhnKdI9D2BmQDp1JaYBZpCaW_L4qgE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

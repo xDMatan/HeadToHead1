@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient_background"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="בחר איזה מוזיקה תתנגן ברקע:"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.572"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.192" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="הפעל מוזיקה בזמן המשחק:"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.801"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.088" />
+
+    <ImageButton
+        android:id="@+id/ibonoff"
+        android:layout_width="71dp"
+        android:layout_height="68dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.069"
+        app:srcCompat="@drawable/on" />
+
+    <RadioGroup
+        android:layout_width="186dp"
+        android:layout_height="308dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.637"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/btnKahoot"
+            android:textStyle="bold"
+            android:layout_width="181dp"
+            android:layout_height="57dp"
+            android:textColor="@color/white"
+            android:text="Kahoot" />
+
+        <RadioButton
+            android:id="@+id/btnlofi"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_width="181dp"
+            android:layout_height="57dp"
+            android:text="Lofi" />
+
+        <RadioButton
+            android:id="@+id/btnrickroll"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_width="181dp"
+            android:layout_height="57dp"
+            android:text="Rick Roll" />
+
+        <RadioButton
+            android:id="@+id/btnintense"
+            android:textColor="@color/white"
+android:textStyle="bold"
+            android:layout_width="181dp"
+            android:layout_height="57dp"
+            android:text="Intense" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnGoToMain"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/CustomPurplerColor"
+        android:text="חזרה למסך בית"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.795" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
