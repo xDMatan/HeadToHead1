@@ -152,7 +152,7 @@ public class GameActivityClassic extends AppCompatActivity implements View.OnCli
             etAnswer.setFocusableInTouchMode(true);
             etAnswer.setInputType(InputType.TYPE_CLASS_TEXT);
 
-            countDownTimer = new CountDownTimer(15000, 50) {
+            countDownTimer = new CountDownTimer(20000, 50) {
                 @Override
                 public void onTick(long millisUntilFinished) {
                     long seconds = millisUntilFinished / 1000;
@@ -163,6 +163,11 @@ public class GameActivityClassic extends AppCompatActivity implements View.OnCli
 
                 @Override
                 public void onFinish() {
+                    etAnswer.setFocusable(false);
+                    etAnswer.setEnabled(false);
+                    etAnswer.setFocusableInTouchMode(false);
+                    etAnswer.setInputType(InputType.TYPE_NULL);
+                    etAnswer.setText("");
                     Current.setText("Time's up!");
                     DatabaseReference ShowCustomDialog = FirebaseDatabase.getInstance().getReference("ClassicGameControl/ShowCustomDialog");
                     ShowCustomDialog.setValue(true);
