@@ -19,8 +19,8 @@
 
         <TextView
             android:id="@+id/TvQuestion"
-            android:layout_width="390dp"
-            android:layout_height="104dp"
+            android:layout_width="382dp"
+            android:layout_height="122dp"
             android:layout_margin="24dp"
             android:background="@drawable/question_card_background"
             android:gravity="center"
