@@ -14,7 +14,7 @@ public class Settings extends AppCompatActivity implements View.OnClickListener 
 private Button btngoBackToMain;
 private ImageButton imageButton;
 private boolean onoff;
-private RadioButton radioButton;
+
 private String selectedSong;
 private RadioButton kahoot,lofi,rickroll,intense;
     @Override

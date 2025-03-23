@@ -214,7 +214,7 @@ public class GameActivityClassic extends AppCompatActivity implements View.OnCli
     }
 
     public void SetChat(String LastMassage) {
-        //עשאר יש שינוי בצאט של הפיירבייס נדע מי שלח לפי קארנט פלייר
+        //כאשר יש שינוי בצאט של הפיירבייס נדע מי שלח לפי קארנט פלייר
         String Result = "";
         String Name = "";
         if (this.player == this.WhichPLayerisPlaying)
