@@ -304,6 +304,15 @@ private Intent intent;
         }
 
     }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+        }
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("TFGameControl/playerswaiting");
+        reference.setValue(false);
+    }
 }
 
 

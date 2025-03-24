@@ -203,7 +203,7 @@ public class GameActivityClassic extends AppCompatActivity implements View.OnCli
         Boolean valid = false;
         while (!valid) {
             java.util.Collections.shuffle(Temp);
-            if (!Temp.get(0).getWaseverused()) {
+            if (!Temp.get(0).getWaseverused()&&CurrentQuestion.getTypeofquestion()!=Temp.get(0).getTypeofquestion()) {
                 Temp.get(0).setWaseverused(true);
                 valid = true;
             }
@@ -292,6 +292,8 @@ public class GameActivityClassic extends AppCompatActivity implements View.OnCli
         }
         if(countDownTimer!=null)
             countDownTimer.cancel();
-
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("ClassicGameControl/playerswaiting");
+        reference.setValue(false);
     }
+
 }
