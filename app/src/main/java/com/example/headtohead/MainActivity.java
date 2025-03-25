@@ -6,6 +6,10 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -16,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnclassic, btnsettings, btnrules, btntf;
     private String SongName;
     private String PlaySong;
-
+    private ActivityResultLauncher<Intent> launcher;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +38,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             SongName = "lobby_classic_game";
             PlaySong = "true";
         }
+        launcher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                new ActivityResultCallback<ActivityResult>() {
+                    @Override
+                    public void onActivityResult(ActivityResult resultCode) {
+                        if(resultCode.getResultCode()==RESULT_OK) {
+                            Intent intent = resultCode.getData();
+                            if(intent.getStringExtra("SongName")!=null) {
+                                SongName = intent.getStringExtra("SongName");
+                            }
+
+                            if(intent.getStringExtra("PlaySong")!=null) {
+                                PlaySong = intent.getStringExtra("PlaySong");
+                            }
+                        }
+
+                        }
+
+                }
+        );
 
     }
 
@@ -57,23 +81,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         if (v == btnsettings) {
             Intent i = new Intent(this,Settings.class);
-            startActivityForResult(i,1);
+            launcher.launch(i);
         }
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode==1){
-            if(resultCode==RESULT_OK) {
-                if(data.getStringExtra("SongName")!=null) {
-                    SongName = data.getStringExtra("SongName");
-                }
-
-                if(data.getStringExtra("PlaySong")!=null) {
-                    PlaySong = data.getStringExtra("PlaySong");
-                }
-            }
-        }
-    }
 }
