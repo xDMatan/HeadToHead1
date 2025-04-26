@@ -59,7 +59,7 @@ public class GameActivityClassic extends AppCompatActivity implements View.OnCli
             mediaPlayer.start();
         }
         collections = new GameCollections();
-        classicCollection = collections.getClassisCollection();
+        classicCollection = collections.getClassicCollection();
         etAnswer = findViewById(R.id.etAnwser);
         ibSend = findViewById(R.id.ibSendAnswer);
         ibSend.setOnClickListener(this);
@@ -69,7 +69,7 @@ public class GameActivityClassic extends AppCompatActivity implements View.OnCli
         CurrentQuestion = new ClassicQuestion("", "", new HashMap<>(), false);
         RvChat = findViewById(R.id.rvChat);
         stringArrayList = new ArrayList<String>();
-        Temp = collections.getClassisCollection();
+        Temp = collections.getClassicCollection();
         // Set up RecyclerView
         RvChat.setLayoutManager(new LinearLayoutManager(this));
         RvChat.setAdapter(new StringAdapter(stringArrayList));

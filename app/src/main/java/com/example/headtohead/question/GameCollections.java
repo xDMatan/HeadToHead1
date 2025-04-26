@@ -4,11 +4,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class GameCollections {
-    private ArrayList<ClassicQuestion> classisCollection;
+    private ArrayList<ClassicQuestion> classicCollection;
     private ArrayList<TFquestion> tFCollection;
 
     public GameCollections(){
-        classisCollection = new ArrayList<ClassicQuestion>();
+        classicCollection = new ArrayList<ClassicQuestion>();
         tFCollection = new ArrayList<TFquestion>();
 
 
@@ -21,7 +21,7 @@ public class GameCollections {
         ClassQ1.put("סגול", true);
         ClassQ1.put("תכלת", true);
         ClassicQuestion q1 = new ClassicQuestion("מהם צבעי הקשת?", "General", ClassQ1, false);
-        classisCollection.add(q1);
+        classicCollection.add(q1);
         HashMap<String, Boolean> ClassQ2 = new HashMap<String, Boolean>();
         ClassQ2.put("אסיה", true);
         ClassQ2.put("אירופה", true);
@@ -31,7 +31,7 @@ public class GameCollections {
         ClassQ2.put("אוסטרליה", true);
         ClassQ2.put("אנטרקטיקה", true);
         ClassicQuestion q2 = new ClassicQuestion("מהם היבשות בעולם?", "Geography", ClassQ2, false);
-        classisCollection.add(q2);
+        classicCollection.add(q2);
         HashMap<String, Boolean> ClassQ3 = new HashMap<String,Boolean>();
         ClassQ3.put("אוקטובר",true);
         ClassQ3.put("נובמבר",true);
@@ -47,7 +47,7 @@ public class GameCollections {
         ClassQ3.put("דצמבר",true);
 
         ClassicQuestion q3 = new  ClassicQuestion("מהם חודשי השנה","General",ClassQ3,false);
-        classisCollection.add(q3);
+        classicCollection.add(q3);
         HashMap<String, Boolean> ClassQ4 = new HashMap<String, Boolean>();
         ClassQ4.put("מרקורי", true);
         ClassQ4.put("חמה", true);
@@ -58,7 +58,7 @@ public class GameCollections {
         ClassQ4.put("אורנוס", true);
         ClassQ4.put("נפטון", true);
         ClassicQuestion q4 = new ClassicQuestion("מהם כוכבי הלכת במערכת השמש?", "Astronomy", ClassQ4, false);
-        classisCollection.add(q4);
+        classicCollection.add(q4);
         HashMap<String, Boolean> ClassQ5 = new HashMap<String, Boolean>();
         ClassQ5.put("נצרות", true);
         ClassQ5.put("אסלאם", true);
@@ -68,7 +68,7 @@ public class GameCollections {
         ClassQ5.put("סיקהיזם", true);
         ClassQ5.put("הדרוזים", true);
         ClassicQuestion q5 = new ClassicQuestion("מהם הדתות הגדולות בעולם?", "Religion", ClassQ5, false);
-        classisCollection.add(q5);
+        classicCollection.add(q5);
         HashMap<String, Boolean> ClassQ6 = new HashMap<String, Boolean>();
         ClassQ6.put("רוסיה", true);
         ClassQ6.put("קנדה", true);
@@ -81,7 +81,7 @@ public class GameCollections {
         ClassQ6.put("קזחסטן", true);
         ClassQ6.put("אלג'יריה", true);
         ClassicQuestion q6 = new ClassicQuestion("מהן עשרת המדינות הגדולות בעולם לפי שטח?", "Geography", ClassQ6, false);
-        classisCollection.add(q6);
+        classicCollection.add(q6);
         HashMap<String, Boolean> ClassQ7 = new HashMap<String, Boolean>();
         ClassQ7.put("סין", true);
         ClassQ7.put("הודו", true);
@@ -94,7 +94,7 @@ public class GameCollections {
         ClassQ7.put("רוסיה", true);
         ClassQ7.put("מקסיקו", true);
         ClassicQuestion q7 = new ClassicQuestion("מהן עשרת המדינות המאוכלסות ביותר בעולם?", "Demography", ClassQ7, false);
-        classisCollection.add(q7);
+        classicCollection.add(q7);
 
         HashMap<String, Boolean> ClassQ9 = new HashMap<String, Boolean>();
         ClassQ9.put("פפרוני", true);
@@ -114,7 +114,7 @@ public class GameCollections {
         ClassQ9.put("רוקט", true);
 
         ClassicQuestion q9 = new ClassicQuestion("מהן תוספות פופולריות לפיצה?", "Food", ClassQ9, false);
-        classisCollection.add(q9);
+        classicCollection.add(q9);
         HashMap<String, Boolean> ClassQ10 = new HashMap<String, Boolean>();
         ClassQ10.put("גיטרה", true);
         ClassQ10.put("פסנתר", true);
@@ -133,7 +133,7 @@ public class GameCollections {
         ClassQ10.put("נבל", true);
 
         ClassicQuestion q10 = new ClassicQuestion("מהם כלי הנגינה הפופולריים ביותר?", "Music", ClassQ10, false);
-        classisCollection.add(q10);
+        classicCollection.add(q10);
         HashMap<String, Boolean> ClassQ11 = new HashMap<String, Boolean>();
         ClassQ11.put("טוקיו", true);
         ClassQ11.put("דלהי", true);
@@ -152,7 +152,7 @@ public class GameCollections {
         ClassQ11.put("קרצ'י", true);
 
         ClassicQuestion q11 = new ClassicQuestion("מהן הערים הגדולות בעולם לפי אוכלוסייה?", "Geography", ClassQ11, false);
-        classisCollection.add(q11);
+        classicCollection.add(q11);
         HashMap<String, Boolean> ClassQ12 = new HashMap<String, Boolean>();
         ClassQ12.put("אקשן", true);
         ClassQ12.put("קומדיה", true);
@@ -171,7 +171,7 @@ public class GameCollections {
         ClassQ12.put("פשע", true);
 
         ClassicQuestion q12 = new ClassicQuestion("מהם ז'אנרי הסרטים המובילים?", "Entertainment", ClassQ12, false);
-        classisCollection.add(q12);
+        classicCollection.add(q12);
         HashMap<String, Boolean> ClassQ13 = new HashMap<String, Boolean>();
         ClassQ13.put("כדורגל", true);
         ClassQ13.put("כדורסל", true);
@@ -190,7 +190,7 @@ public class GameCollections {
         ClassQ13.put("ג'ודו", true);
 
         ClassicQuestion q13 = new ClassicQuestion("מהם ענפי הספורט הפופולריים בעולם?", "Sports", ClassQ13, false);
-        classisCollection.add(q13);
+        classicCollection.add(q13);
         HashMap<String, Boolean> ClassQ23 = new HashMap<String, Boolean>();
         ClassQ23.put("ברדלס", true);
         ClassQ23.put("אנטילופה", true);
@@ -209,7 +209,7 @@ public class GameCollections {
         ClassQ23.put("ארנב", true);
 
         ClassicQuestion q23 = new ClassicQuestion("מהם החיות המהירות ביותר בעולם?", "Animals", ClassQ23, false);
-        classisCollection.add(q23);
+        classicCollection.add(q23);
         HashMap<String, Boolean> ClassQ29 = new HashMap<String, Boolean>();
         ClassQ29.put("אתלטיקה", true);
         ClassQ29.put("שחייה", true);
@@ -228,7 +228,7 @@ public class GameCollections {
         ClassQ29.put("טריאתלון", true);
 
         ClassicQuestion q29 = new ClassicQuestion("מהם המשחקים האולימפיים הפופולריים ביותר?", "Sports", ClassQ29, false);
-        classisCollection.add(q29);
+        classicCollection.add(q29);
         HashMap<String, Boolean> ClassQ30 = new HashMap<String, Boolean>();
         ClassQ30.put("טלוויזיה", true);
         ClassQ30.put("מחשב", true);
@@ -247,7 +247,7 @@ public class GameCollections {
         ClassQ30.put("שעון מעורר", true);
 
         ClassicQuestion q30 = new ClassicQuestion("מהם המכשירים האלקטרוניים הנפוצים ביותר בבית?", "Technology", ClassQ30, false);
-        classisCollection.add(q30);
+        classicCollection.add(q30);
 
 
 
@@ -315,8 +315,8 @@ public class GameCollections {
 
     }
 
-    public ArrayList<ClassicQuestion> getClassisCollection() {
-        return classisCollection;
+    public ArrayList<ClassicQuestion> getClassicCollection() {
+        return classicCollection;
     }
 
     public ArrayList<TFquestion> getTFCollection() {
