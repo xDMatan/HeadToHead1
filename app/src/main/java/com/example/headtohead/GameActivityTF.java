@@ -77,8 +77,6 @@ private Intent intent;
                 reference.setValue(Temp.get(0).getQuestion());//מעלה את השאלה לfb
                 TvQuestion.setText("Waiting...");
 
-
-
             }
             if (this.player == 1) {
                     TvQuestion.setText("Waiting for players...");
@@ -165,11 +163,22 @@ private Intent intent;
         }
     }
     public void GetANewRandomQuestion() {
-        if(turn<=Temp.size()) {
+        if(turn<=Temp.size()-5) {
             Boolean valid = false;
             while (!valid) {
                 java.util.Collections.shuffle(this.Temp);
-                if (!Temp.get(0).getWaseverused() ) {
+                if (!Temp.get(0).getWaseverused()&&CurrentQuestion.getTypeofquestion()!=Temp.get(0).getTypeofquestion()) {
+                    Temp.get(0).setWaseverused(true);
+                    valid = true;
+                }
+
+            }
+        }
+        else{
+            Boolean valid = false;
+            while (!valid) {
+                java.util.Collections.shuffle(this.Temp);
+                if (!Temp.get(0).getWaseverused()) {
                     Temp.get(0).setWaseverused(true);
                     valid = true;
                 }

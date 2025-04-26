@@ -14,7 +14,5 @@ public class ClassicQuestion extends Question {
         return answers;
     }
 
-    public void setAnswers(HashMap<String, Boolean> answers) {
-        this.answers = answers;
-    }
+
 }
